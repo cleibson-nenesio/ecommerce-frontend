@@ -9,7 +9,7 @@ export default function Input({ left, right, className, ...rest }: InputProps) {
 	const rightIconStyles = hasRightIcon ? ' pr-[45px] ' : ' pr-[20px] ';
 
 	return (
-		<div className={'relative'}>
+		<div className={'relative ' + className}>
 			{hasLeftIcon && (
 				<div className="absolute left-[12px] top-1/2 -translate-y-1/2 pr-[5px] bg-input-bg">
 					{left()}
@@ -21,8 +21,7 @@ export default function Input({ left, right, className, ...rest }: InputProps) {
 				className={
 					`bg-input-bg outline-none py-[7px] rounded` +
 					leftIconStyles +
-					rightIconStyles +
-					className
+					rightIconStyles
 				}
 				{...rest}
 			/>
